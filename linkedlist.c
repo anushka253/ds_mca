@@ -123,18 +123,18 @@ void deletion_end()
         free(temp);
     }
 }
-void deletion_pos(int pos)
+void deletion_spec(int pos)
 {
-    struct node *prv;
+    struct node *next;
     temp=head;
-    for(int i=1;i<=pos;i++)
+    for(int i=1;i<=pos-1;i++)
     {
-        prv=temp;
         temp=temp->link;
     }
-    prv->link=temp->link;
-    printf("\n %d is deleted...",temp->d);
-    free(temp);
+    new=temp->link;
+    temp->link=new->link;
+    printf("\n %d is deleted...",new->d);
+    free(new);
 }
 int main()
 {
