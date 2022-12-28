@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define s 1
+#define s 100
 int stack[s],top=-1;
 void push();
 void pop();
